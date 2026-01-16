@@ -1,0 +1,25 @@
+# --- Python / FastAPI ---
+**/__pycache__/
+**/*.pyc
+SlamleafAPI/venv/
+SlamleafAPI/.venv/
+SlamleafAPI/.env
+SlamleafAPI/.idea
+SlamleafAPI/__pycache__
+SlamleafAPI/__pycache__
+SlamLeafAPI/uploads/
+SlamLeafAPI/app/uploads/
+# Android / Gradle / IntelliJ
+**/.idea/
+**/.gradle/
+**/.kotlin/
+**/build/
+**/*.iml
+**/local.properties
+mobile/.gradle/
+mobile/.kotlin/
+mobile/.idea/
+mobile/app/build/
+# --- OS ---
+.DS_Store
+Thumbs.db

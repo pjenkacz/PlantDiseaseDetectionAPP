@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top bar: back + title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_media_previous"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:id="@+id/textTitleScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Wyniki analizy"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Big image -->
+        <ImageView
+            android:id="@+id/imageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop" />
+
+        <!-- Main disease card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#E8F5E9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/textMainLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wykryto chorobę"
+                    android:textAllCaps="true"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"/>
+
+                <TextView
+                    android:id="@+id/textDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Tomato Early Blight"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pewność wykrycia"
+                        android:textSize="15sp"
+                        android:textColor="#111827"/>
+
+                    <TextView
+                        android:id="@+id/textConfidence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="87%"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"/>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressConfidenceDetail"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="10dp"
+                    android:max="100"
+                    android:progress="87" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Disease description card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/textDescriptionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opis wykrytej choroby"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+
+                <TextView
+                    android:id="@+id/textDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Description will be shown here..."
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="#111827" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Recommended products card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRecommendedProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/textRecommendedTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rekomendowane środki ochrony roślin"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+
+                <TextView
+                    android:id="@+id/textRecommendedDisclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Przed użyciem dokładnie zapoznaj się z etykietą środka ochrony roślin."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="#6B7280" />
+
+                <TextView
+                    android:id="@+id/textNoRecommended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Brak rekomendacji dla tej choroby."
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:visibility="gone" />
+
+                <!-- Container for 1-3 mini cards -->
+                <LinearLayout
+                    android:id="@+id/containerRecommendedProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="14dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <!-- Other detections header -->
+        <TextView
+            android:id="@+id/textOtherDetectionsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Pozostałe rozpoznania"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Container na inne detekcje (np. dynamicznie dodawane karty) -->
+        <LinearLayout
+            android:id="@+id/containerOtherDetections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

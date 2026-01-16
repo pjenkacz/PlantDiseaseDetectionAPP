@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SlamLeaf</string>
+    <string name="email">Email</string>
+    <string name="password">Hasło</string>
+    <string name="register">Zarejestruj</string>
+    <string name="already_have_account">Masz już konto? Zaloguj się</string>
+    <string name="not_account_yet">Nie masz konta? Zarejestruj się!</string>
+    <string name="name">Imię</string>
+    <string name="login">Zaloguj</string>
+    <string name="open_camera">Otwórz kamerę</string>
+    <string name="logout">Wyloguj</string>
+    <string name="email_example">markovski@email.com</string>
+
+</resources>

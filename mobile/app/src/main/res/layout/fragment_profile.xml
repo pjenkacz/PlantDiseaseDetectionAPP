@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1FAF5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Tytuł ekranu -->
+        <TextView
+            android:id="@+id/textProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profil"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- KARTA: dane użytkownika + przyciski -->
+        <LinearLayout
+            android:id="@+id/cardUserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/bg_card_light_green"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:id="@+id/textUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marek Markowski"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/email_example"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnChangeName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zmień imie" />
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnChangeEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zmień email" />
+            </LinearLayout>
+
+            <!-- FORMULARZ: zmiana emaila (domyślnie schowany) -->
+            <LinearLayout
+                android:id="@+id/layoutChangeEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/inputNewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nowy email"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/inputPasswordConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Hasło"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/btnSubmitChangeEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Zmień email" />
+
+            </LinearLayout>
+            <!-- FORMULARZ: zmiana imienia (domyślnie schowany) -->
+            <LinearLayout
+                android:id="@+id/layoutChangeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/inputNewName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nowe imię"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/inputPasswordForName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Hasło"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/btnSubmitChangeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Zmień imię" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- KARTA: Security -->
+        <LinearLayout
+            android:id="@+id/cardSecurity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_light_green"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textSecurityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 🔑 Bezpieczeństwo konta"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/rowChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- Ikonka kłódki (podmień na swoją) -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_lock_lock" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zmień hasło do konta"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aktualizuj swoje hasło logowania "
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=">"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!-- FORMULARZ: zmiana hasła (domyślnie schowany) -->
+            <LinearLayout
+                android:id="@+id/layoutChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/inputCurrentPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Obecne hasło"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/inputNewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Nowe hasło"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/inputRepeatNewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Powtórz nowe hasło"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/btnSubmitChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Zapisz hasło" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- KARTA: Account / Logout -->
+        <LinearLayout
+            android:id="@+id/cardAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_light_green"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E57373"
+                android:drawablePadding="8dp"
+                android:padding="12dp"
+                android:text="Wyloguj się"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

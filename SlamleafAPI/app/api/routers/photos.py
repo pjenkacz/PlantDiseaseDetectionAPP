@@ -1,4 +1,6 @@
+import json
 import os
+from typing import List
 
 from fastapi import APIRouter, Depends, UploadFile, File, HTTPException, status
 from sqlalchemy.orm import Session
@@ -92,9 +94,6 @@ async def upload_photo(
         message="uploaded",
         detections=detections
     )
-
-import json
-from typing import List
 
 @router.get("/get", response_model=schemas.PhotoUploadListResponse)
 async def get_photos(

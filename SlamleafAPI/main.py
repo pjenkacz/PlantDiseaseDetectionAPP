@@ -4,6 +4,7 @@ from app.core.auth import router as auth_router
 from app.database import Base, engine
 from fastapi.staticfiles import StaticFiles
 from app.api.routers.photos import router as photos_router
+from app.api.routers.user import router as user_router
 from app.core.config import settings
 
 app = FastAPI(
@@ -35,7 +36,7 @@ async def health_check():
 
 Base.metadata.create_all(bind=engine)
 app.include_router(auth_router)
-app.include_router(auth_router)
+app.include_router(user_router)
 app.include_router(photos_router)
 
 # serwowanie plików z katalogu uploads/

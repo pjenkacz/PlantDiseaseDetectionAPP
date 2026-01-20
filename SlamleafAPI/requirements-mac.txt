@@ -1,0 +1,26 @@
+# ── Core framework ────────────────────────────────────────────────
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+starlette==0.27.0
+
+# ── Baza danych ───────────────────────────────────────────────────
+sqlalchemy==2.0.23
+pymysql==1.1.0
+
+# ── Konfiguracja i walidacja ──────────────────────────────────────
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# ── Autentykacja (JWT + bcrypt) ───────────────────────────────────
+bcrypt==4.1.2
+python-jose==3.3.0
+cryptography==41.0.7
+
+# ── ML – YOLO (instaluje torch/torchvision automatycznie) ─────────
+ultralytics==8.3.14
+
+# ── Obrazy ───────────────────────────────────────────────────────
+pillow==10.1.0
+pillow-heif==0.13.0
